@@ -1,5 +1,5 @@
 {
- "name":"ComfoAir 350 USB MQTT", "version":"1.0.2", "slug":"comfoair_usb_mqtt",
+ "name":"ComfoAir 350 USB MQTT", "version":"1.0.3", "slug":"comfoair_usb_mqtt",
  "description":"Lokale USB-RS232-Anbindung der ComfoAir 350 an MQTT",
  "arch":["amd64","aarch64"], "startup":"application", "boot":"manual",
  "init":false, "uart":true, "hassio_api":true, "services":["mqtt:need"],

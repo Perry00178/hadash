@@ -5,6 +5,8 @@ MQTT-Zugangsdaten werden aus dem Supervisor-Dienst bezogen und nicht in Logs aus
 Lokale Anpassung im Upstream-Skript: ConfigParser ohne Interpolation, damit MQTT-Passwoerter mit Prozentzeichen funktionieren.
 Lokale Anpassung 1.0.2 (27.09.2026): Serieller Zugriff per Lock (MQTT-Befehle und Abfrageschleife stahlen sich gegenseitig die Antworten); Stufenbefehle laufen ueber eine Warteschlange in der Hauptschleife (schnell aufeinanderfolgende Befehle -> nur der letzte), Stufe wird zusaetzlich alle 10 s und 5 s nach einem Befehl abgefragt.
 
+Lokale Anpassung 1.0.3 (17.10.2026): Filter-Reset fuer RS232 sendet jetzt 0x00DB mit 00 00 00 01 (der Upstream-Befehl 0x0037 gilt nur fuer RS485 und setzte die Filterstunden nicht zurueck).
+
 ## Einrichtung
 1. Add-on-Store aktualisieren und dieses lokale Add-on installieren.
 2. openHAB-ComfoAir-Anbindung deaktivieren, USB-Adapter umstecken.

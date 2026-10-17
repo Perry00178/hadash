@@ -14,6 +14,8 @@ Basis: [adorobis/hacomfoairmqtt](https://github.com/adorobis/hacomfoairmqtt), Co
   die Schnittstelle und stahlen sich gegenseitig die Antworten (Stufe erschien erst nach ~1 min).
   Stufenbefehle laufen über eine Warteschlange in der Hauptschleife (mehrere schnell hintereinander →
   nur der letzte), die Stufe wird zusätzlich alle 10 s und 5 s nach einem Befehl abgefragt.
+- **1.0.3:** Filter-Reset für RS232 korrigiert: Der Upstream-Befehl `0x0037` gilt nur für RS485 und setzte die
+  Filterstunden nicht zurück. Jetzt wird `0x00DB` mit den Daten `00 00 00 01` gesendet (an der ComfoAir 350 getestet).
   Rückmeldung nach einem Stufenwechsel jetzt nach ca. 7–8 s.
 
 ## Optionen
